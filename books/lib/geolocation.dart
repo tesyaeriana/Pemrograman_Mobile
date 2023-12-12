@@ -17,23 +17,23 @@ class _LocationScreenState extends State<LocationScreen> {
   @override
   void initState() {
     super.initState();
-    getPosition().then((Position myPos) {
-      myPosition =
-          'Latitude: ${myPos.latitude.toString()} - Longitude: ${myPos.longitude.toString()}';
-      setState(() {
-        myPosition = myPosition;
-      });
-    });
+    // getPosition().then((Position myPos) {
+    //   myPosition =
+    //       'Latitude: ${myPos.latitude.toString()} - Longitude: ${myPos.longitude.toString()}';
+    //   setState(() {
+    //     myPosition = myPosition;
+    //   });
+    // });
 
     // // Prak 7 Langkah 3
-    // position = getPosition();
+    position = getPosition();
   }
 
   @override
   Widget build(BuildContext context) {
-    final myWidget =
-        myPosition == '' ? const CircularProgressIndicator() : Text(myPosition);
-    ;
+    // final myWidget =
+    //     myPosition == '' ? const CircularProgressIndicator() : Text(myPosition);
+    // ;
 
     return Scaffold(
         appBar: AppBar(
@@ -58,11 +58,11 @@ class _LocationScreenState extends State<LocationScreen> {
   }
 
   Future<Position> getPosition() async {
-    // await Geolocator.requestPermission();
+    await Geolocator.requestPermission();
     await Geolocator.isLocationServiceEnabled();
 
     // Prak 7 Langkah 1
-    await Future.delayed(const Duration(seconds: 5));
+    await Future.delayed(const Duration(seconds: 10));
     Position? position = await Geolocator.getCurrentPosition();
     return position;
   }

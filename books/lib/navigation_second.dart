@@ -14,7 +14,7 @@ class _NavigationSecondState extends State<NavigationSecond> {
     Color color;
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Navigation Second Screen Shofiatul"),
+        title: const Text("Navigation Second Screen Tesya"),
       ),
       body: Center(
         child: Column(

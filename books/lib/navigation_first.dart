@@ -17,7 +17,7 @@ class _NavigationFirstState extends State<NavigationFirst> {
     return Scaffold(
       backgroundColor: color,
       appBar: AppBar(
-        title: const Text('Navigation First Screen Mirza'),
+        title: const Text('Navigation First Screen Tesya'),
       ),
       body: Center(
         child: ElevatedButton(

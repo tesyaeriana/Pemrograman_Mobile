@@ -6,8 +6,8 @@ import 'package:http/http.dart';
 import 'package:http/http.dart' as http;
 import 'package:async/async.dart';
 import 'package:books/geolocation.dart';
-// import 'package:books/navigation_dialog.dart';
-// import 'package:books/navigation_first.dart';
+ import 'package:books/navigation_dialog.dart';
+ import 'package:books/navigation_first.dart';
 
 void main() {
   runApp(const MyApp());
@@ -29,12 +29,13 @@ class MyApp extends StatelessWidget {
       // home: const FuturePage(),
 
       //Prak 6 Langkah 6
-      home: const LocationScreen(),
+      // home: const LocationScreen(),
 
       //Prak 8 Langkah 6
-      // home: const NavigationFirst(),
+      //  home: const NavigationFirst(),
 
       // //Prak 9 Langkah 5
+       home: const NavigationDialogScreen(),
       // home: const FuturePage(),
     );
   }
